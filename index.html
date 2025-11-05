@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crochetiya क्रोशिया - Handmade Wool Creations | Flowers, Toys, Bags & More</title>
+    <meta name="description" content="Discover beautiful handmade wool flowers, toys, keychains, and bags. Custom crochet creations made with love. Order now via WhatsApp!">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #FF6B9D;
+            --secondary: #FEC868;
+            --accent: #C44569;
+            --dark: #2C3E50;
+            --light: #FFF8F3;
+            --cream: #FFF5E9;
+            --gradient-1: linear-gradient(135deg, #FF6B9D, #C44569);
+            --gradient-2: linear-gradient(135deg, #FEC868, #FFA500);
+            --gradient-3: linear-gradient(135deg, #A8E6CF, #56CCF2);
+            --shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            overflow-x: hidden;
+            background: var(--light);
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(15px);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 0.7rem 5%;
+            box-shadow: 0 6px 30px rgba(0,0,0,0.12);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-1);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .whatsapp-nav {
+            background: #25D366;
+            color: white !important;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-nav:hover {
+            background: #20BA5A;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-nav::after {
+            display: none;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #FFF5E9 0%, #FFE8F0 50%, #E8F5FF 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 8rem 5% 4rem;
+        }
+
+        .hero::before {
+            content: '🧶';
+            position: absolute;
+            font-size: 25rem;
+            opacity: 0.03;
+            animation: float 25s ease-in-out infinite;
+            top: 10%;
+            left: -10%;
+        }
+
+        .hero::after {
+            content: '🌸';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.03;
+            animation: float 30s ease-in-out infinite reverse;
+            bottom: 10%;
+            right: -10%;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(50px, -50px) rotate(10deg); }
+            66% { transform: translate(-30px, 30px) rotate(-5deg); }
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInUp 1s ease;
+            font-weight: 900;
+        }
+
+        .hero-text .hindi {
+            font-size: 2.8rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            animation: fadeInUp 1s ease 0.1s both;
+        }
+
+        .hero-text p {
+            font-size: 1.3rem;
+            color: #555;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .btn {
+            padding: 1.1rem 2.8rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--gradient-1);
+            color: white;
+            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 45px rgba(255, 107, 157, 0.4);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background: #20BA5A;
+            transform: translateY(-4px);
+            box-shadow: 0 15px 45px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-4px);
+        }
+
+        .hero-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            animation: fadeIn 1.5s ease;
+            position: relative;
+        }
+
+        .gallery-item {
+            aspect-ratio: 1;
+            border-radius: 25px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow);
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.7));
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1;
+        }
+
+        .gallery-item:hover::before {
+            opacity: 1;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-item-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem;
+            color: white;
+            font-weight: 600;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+            z-index: 2;
+        }
+
+        .gallery-item:hover .gallery-item-overlay {
+            transform: translateY(0);
+        }
+
+        .floating-element {
+            position: absolute;
+            font-size: 3rem;
+            opacity: 0.1;
+            animation: floatRandom 15s ease-in-out infinite;
+        }
+
+        @keyframes floatRandom {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(30px, -30px) rotate(5deg); }
+            50% { transform: translate(-20px, 20px) rotate(-5deg); }
+            75% { transform: translate(20px, 10px) rotate(3deg); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        section {
+            padding: 6rem 5%;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        #products {
+            background: white;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: var(--cream);
+            border-radius: 25px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 70px rgba(0,0,0,0.18);
+        }
+
+        .product-image {
+            width: 100%;
+            aspect-ratio: 1;
+            background: var(--gradient-1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.3));
+        }
+
+        .product-info {
+            padding: 2rem;
+        }
+
+        .product-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 0.7rem;
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .product-info p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        #instagram {
+            background: linear-gradient(135deg, #FFF5E9, #FFE8F0);
+        }
+
+        .instagram-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .instagram-handle {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            box-shadow: var(--shadow);
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            margin-top: 1.5rem;
+        }
+
+        .instagram-handle:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            background: var(--gradient-1);
+            color: white;
+        }
+
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .instagram-post {
+            aspect-ratio: 1;
+            border-radius: 20px;
+            background: var(--gradient-1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s;
+            box-shadow: var(--shadow);
+        }
+
+        .instagram-post img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .instagram-post::after {
+            content: '❤️';
+            position: absolute;
+            font-size: 3rem;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.3s;
+        }
+
+        .instagram-post:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+
+        .instagram-post:hover::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+        }
+
+        .whatsapp-float a {
+            width: 70px;
+            height: 70px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+            box-shadow: 0 10px 35px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s;
+            animation: pulse 2s ease-in-out infinite;
+            text-decoration: none;
+        }
+
+        .whatsapp-float a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 50px rgba(37, 211, 102, 0.6);
+            animation: none;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); box-shadow: 0 15px 45px rgba(37, 211, 102, 0.6); }
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 5% 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-section p, .footer-section a {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.9;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 25px;
+            text-align: center;
+            max-width: 500px;
+            animation: slideUp 0.3s ease;
+        }
+
+        .modal-content .icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .modal-content p {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #why {
+            background: white;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .why-card {
+            padding: 2.5rem;
+            background: var(--cream);
+            border-radius: 25px;
+            text-align: center;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-1);
+            transition: left 0.5s;
+            z-index: 0;
+        }
+
+        .why-card:hover::before {
+            left: 0;
+        }
+
+        .why-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            color: white;
+        }
+
+        .why-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .why-card .icon {
+            font-size: 4rem;
+            margin-bottom: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+        .why-card:hover .icon {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        .why-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .why-card:hover h3 {
+            color: white;
+        }
+
+        .why-card p {
+            color: #666;
+            line-height: 1.8;
+            transition: color 0.3s;
+        }
+
+        .why-card:hover p {
+            color: rgba(255,255,255,0.95);
+        }
+
+        #contact {
+            background: linear-gradient(135deg, #FFF5E9, #FFE8F0);
+        }
+
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 4rem;
+            border-radius: 30px;
+            box-shadow: 0 20px 70px rgba(0,0,0,0.12);
+        }
+
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-method {
+            text-align: center;
+            padding: 2rem;
+            background: var(--cream);
+            border-radius: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .contact-method:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-method .icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-method h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .contact-method p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.7rem;
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1.1rem 1.5rem;
+            border: 2px solid #E0E0E0;
+            border-radius: 15px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(255, 107, 157, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.3rem;
+            background: var(--gradient-1);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 45px rgba(255, 107, 157, 0.35);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .ai-assistant {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1001;
+        }
+
+        .ai-button {
+            width: 75px;
+            height: 75px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 10px 35px rgba(255, 107, 157, 0.45);
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 2.2rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .ai-button:hover {
+            transform: scale(1.12) rotate(15deg);
+            box-shadow: 0 15px 50px rgba(255, 107, 157, 0.6);
+            animation: none;
+        }
+
+        .ai-chat {
+            position: absolute;
+            bottom: 95px;
+            right: 0;
+            width: 420px;
+            height: 600px;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 20px 70px rgba(0,0,0,0.25);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .ai-chat.active {
+            display: flex;
+        }
+
+        .ai-header {
+            background: var(--gradient-1);
+            color: white;
+            padding: 1.8rem;
+            font-weight: 600;
+            font-size: 1.15rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .ai-close {
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .ai-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .ai-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            background: linear-gradient(to bottom, #FFF5E9, white);
+        }
+
+        .ai-messages::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .ai-messages::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+
+        .ai-message {
+            padding: 1.1rem 1.3rem;
+            border-radius: 18px;
+            max-width: 85%;
+            animation: messageSlide 0.3s ease;
+            line-height: 1.6;
+        }
+
+        @keyframes messageSlide {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .ai-message.bot {
+            background: white;
+            align-self: flex-start;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            border: 2px solid #f0f0f0;
+        }
+
+        .ai-message.user {
+            background: var(--gradient-1);
+            color: white;
+            align-self: flex-end;
+            box-shadow: 0 2px 12px rgba(255, 107, 157, 0.3);
+        }
+
+        .ai-typing {
+            padding: 1rem;
+            background: white;
+            border-radius: 18px;
+            align-self: flex-start;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            display: none;
+        }
+
+        .ai-typing.active {
+            display: block;
+        }
+
+        .ai-typing span {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+            margin: 0 2px;
+            animation: bounce 1.4s infinite;
+        }
+
+        .ai-typing span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .ai-typing span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes bounce {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-10px); }
+        }
+
+        .ai-input-area {
+            padding: 1.2rem;
+            background: white;
+            border-top: 2px solid #f0f0f0;
+            display: flex;
+            gap: 0.7rem;
+        }
+
+        .ai-input {
+            flex: 1;
+            padding: 1rem 1.3rem;
+            border: 2px solid #E0E0E0;
+            border-radius: 25px;
+            outline: none;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .ai-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.1);
+        }
+
+        .ai-send {
+            padding: 1rem 1.8rem;
+            background: var(--gradient-1);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .ai-send:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(255, 107, 157, 0.3);
+        }
+
+        .ai-send:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .quick-replies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            padding: 0 1.5rem 1rem;
+        }
+
+        .quick-reply {
+            padding: 0.6rem 1.2rem;
+            background: white;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .quick-reply:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 3rem;
+            }
+
+            .hero-text h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero-text .hindi {
+                font-size: 2rem;
+            }
+
+            .hero-text p {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem 0;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: all 0.3s;
+            }
+
+            nav ul.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            nav ul li {
+                width: 100%;
+                text-align: center;
+                padding: 0.8rem 0;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .ai-chat {
+                width: 95vw;
+                right: 2.5vw;
+                left: 2.5vw;
+                height: 70vh;
+            }
+
+            .contact-container {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .logo {
+                font-size: 1.4rem;
+            }
+
+            .btn {
+                padding: 0.9rem 1.8rem;
+                font-size: 0.95rem;
+            }
+
+            .products-grid,
+            .instagram-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo">🧶 Crochetiya</div>
+        <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="navMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#instagram">Gallery</a></li>
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://wa.me/919013463956?text=Hi%20Crochetiya!%20I'm%20interested%20in%20your%20handmade%20wool%20products" target="_blank" class="whatsapp-nav">💬 WhatsApp</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="floating-element" style="top: 20%; left: 10%;">🌸</div>
+        <div class="floating-element" style="top: 60%; left: 5%; animation-delay: 2s;">🧸</div>
+        <div class="floating-element" style="top: 30%; right: 8%; animation-delay: 4s;">👜</div>
+        <div class="floating-element" style="bottom: 20%; right: 15%; animation-delay: 1s;">🔑</div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Crochetiya</h1>
+                <div class="hindi">क्रोशिया</div>
+                <p>Handcrafted Wool Artistry - Where Every Stitch Tells a Story of Love, Warmth, and Creativity ✨</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/919013463956?text=Hi%20Crochetiya!%20I'm%20interested%20in%20your%20handmade%20wool%20products" target="_blank" class="btn btn-whatsapp">💬 Order on WhatsApp</a>
+                    <a href="#products" class="btn btn-primary">🌸 Explore Collection</a>
+                    <a href="#contact" class="btn btn-secondary">✉️ Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-gallery">
+                <div class="gallery-item">
+                    <div class="product-image" style="background: linear-gradient(135deg, #FF6B9D, #C44569);">🌺</div>
+                    <div class="gallery-item-overlay">Wool Flowers</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="product-image" style="background: linear-gradient(135deg, #FEC868, #FFA500);">🧸</div>
+                    <div class="gallery-item-overlay">Handmade Toys</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="product-image" style="background: linear-gradient(135deg, #A8E6CF, #56CCF2);">👜</div>
+                    <div class="gallery-item-overlay">Crochet Bags</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="product-image" style="background: linear-gradient(135deg, #C44569, #8B3A62);">🔑</div>
+                    <div class="gallery-item-overlay">Keychains</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="section-header">
+            <h2>Our Handmade Collection</h2>
+            <p>Each piece is lovingly crafted with premium wool, attention to detail, and endless passion ❤️</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">🌺</div>
+                <div class="product-info">
+                    <h3>Wool Flowers</h3>
+                    <p>Eternal blooms that never fade - Perfect for home decor, gifts, and special occasions. Available in vibrant colors!</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #FEC868, #FFA500);">🧸</div>
+                <div class="product-info">
+                    <h3>Handmade Toys</h3>
+                    <p>Soft, safe, and adorable companions for your little ones. Each toy is crafted with love and child-safe materials.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #A8E6CF, #56CCF2);">🔑</div>
+                <div class="product-info">
+                    <h3>Keychains</h3>
+                    <p>Cute & colorful accessories to brighten your everyday carry. Perfect as gifts or party favors!</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #C44569, #8B3A62);">👜</div>
+                <div class="product-info">
+                    <h3>Crochet Bags</h3>
+                    <p>Stylish, durable, and eco-friendly bags for every occasion. Sustainable fashion that lasts!</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #F093FB, #F5576C);">🎨</div>
+                <div class="product-info">
+                    <h3>Custom Creations</h3>
+                    <p>Have an idea? We'll bring your vision to life with wool! Personalized colors, sizes, and designs.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #4FACFE, #00F2FE);">🎁</div>
+                <div class="product-info">
+                    <h3>Gift Sets</h3>
+                    <p>Thoughtfully curated sets perfect for special occasions. Beautiful packaging included!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="instagram">
+        <div class="section-header instagram-header">
+            <h2>See Our Creations</h2>
+            <p>Follow us on Instagram for daily inspiration, new designs, and behind-the-scenes magic! 📸</p>
+            <a href="https://www.instagram.com/crochetiya/" target="_blank" class="instagram-handle">
+                📸 @crochetiya - Follow Us on Instagram
+            </a>
+        </div>
+        <div class="instagram-grid">
+            <div class="instagram-post">
+                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #FF6B9D, #C44569); display: flex; align-items: center; justify-content: center; font-size: 5rem;">🌸</div>
+            </div>
+            <div class="instagram-post">
+                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #FEC868, #FFA500); display: flex; align-items: center; justify-content: center; font-size: 5rem;">🧸</div>
+            </div>
+            <div class="instagram-post">
+                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #A8E6CF, #56CCF2); display: flex; align-items: center; justify-content: center; font-size: 5rem;">🔑</div>
+            </div>
+            <div class="instagram-post">
+                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #C44569, #8B3A62); display: flex; align-items: center; justify-content: center; font-size: 5rem;">👜</div>
+            </div>
+            <div class="instagram-post">
+                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #F093FB, #F5576C); display: flex; align-items: center; justify-content: center; font-size: 5rem;">💐</div>
+            </div>
+            <div class="instagram-post">
+                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #4FACFE, #00F2FE); display: flex; align-items: center; justify-content: center; font-size: 5rem;">🎀</div>
+            </div>
+            <div class="instagram-post">
+                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #FFD700, #FF8C00); display: flex; align-items: center; justify-content: center; font-size: 5rem;">🦋</div>
+            </div>
+            <div class="instagram-post">
+                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #98D8C8, #6FCBB6); display: flex; align-items: center; justify-content: center; font-size: 5rem;">🌻</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why">
+        <div class="section-header">
+            <h2>Why Choose Handmade Wool?</h2>
+            <p>More than just products - each piece carries heart, soul, and sustainability 💚</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="icon">🎨</div>
+                <h3>Uniquely Yours</h3>
+                <p>No two pieces are exactly alike. Each creation is one-of-a-kind, crafted with personal attention and care.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon">💚</div>
+                <h3>Eco-Friendly</h3>
+                <p>Sustainable wool, zero waste mindset, and traditional techniques that respect our planet Mother Earth.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon">✨</div>
+                <h3>Premium Quality</h3>
+                <p>Made with the finest wool and countless hours of skilled craftsmanship. Built to last and cherish forever.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon">❤️</div>
+                <h3>Made with Love</h3>
+                <p>Every stitch carries passion and dedication. You can feel the warmth and care in every single piece.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon">🎁</div>
+                <h3>Perfect Gifts</h3>
+                <p>Give something meaningful and memorable. Handmade gifts show you truly care about your loved ones.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon">🏠</div>
+                <h3>Supporting Local Art</h3>
+                <p>Your purchase directly supports local artisans and keeps traditional crafts alive for future generations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-header">
+            <h2>Let's Create Together</h2>
+            <p>Ready to own a unique piece? Reach out and let's make something special! 🌟</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-methods">
+                <a href="https://wa.me/919013463956?text=Hi%20Crochetiya!%20I'm%20interested%20in%20your%20handmade%20wool%20products" target="_blank" class="contact-method">
+                    <div class="icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p>+91 9013463956</p>
+                    <p style="font-size: 0.85rem; margin-top: 0.5rem;">Quick response!</p>
+                </a>
+                <a href="mailto:anuanushkasharma3613@gmail.com" class="contact-method">
+                    <div class="icon">✉️</div>
+                    <h3>Email</h3>
+                    <p>anuanushkasharma3613@gmail.com</p>
+                    <p style="font-size: 0.85rem; margin-top: 0.5rem;">For detailed inquiries</p>
+                </a>
+                <a href="https://www.instagram.com/crochetiya/" target="_blank" class="contact-method">
+                    <div class="icon">📸</div>
+                    <h3>Instagram</h3>
+                    <p>@crochetiya</p>
+                    <p style="font-size: 0.85rem; margin-top: 0.5rem;">DM us anytime!</p>
+                </a>
+            </div>
+
+            <form id="contactForm">
+                <div class="form-group">
+                    <label>Your Name *</label>
+                    <input type="text" name="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label>Email Address *</label>
+                    <input type="email" name="email" required placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX">
+                </div>
+                <div class="form-group">
+                    <label>What are you interested in? *</label>
+                    <select name="product" required>
+                        <option value="">Select a product category</option>
+                        <option value="Wool Flowers">🌺 Wool Flowers</option>
+                        <option value="Handmade Toys">🧸 Handmade Toys</option>
+                        <option value="Keychains">🔑 Keychains</option>
+                        <option value="Crochet Bags">👜 Crochet Bags</option>
+                        <option value="Custom Creation">🎨 Custom Creation</option>
+                        <option value="Gift Sets">🎁 Gift Sets</option>
+                        <option value="Just Browsing">👀 Just Browsing</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Your Message / Requirements *</label>
+                    <textarea name="message" required placeholder="Tell us about colors, size, design preferences, or any special requests..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span>Send Message</span>
+                    <span>📤</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🧶 Crochetiya क्रोशिया</h3>
+                <p>Handcrafted with Love</p>
+                <p>Every Stitch Tells a Story</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/crochetiya/" target="_blank">📸</a>
+                    <a href="https://wa.me/919013463956" target="_blank">💬</a>
+                    <a href="mailto:anuanushkasharma3613@gmail.com">✉️</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Products</h3>
+                <p><a href="#products">Wool Flowers</a></p>
+                <p><a href="#products">Handmade Toys</a></p>
+                <p><a href="#products">Keychains</a></p>
+                <p><a href="#products">Crochet Bags</a></p>
+                <p><a href="#products">Custom Orders</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>📱 +91 9013463956</p>
+                <p>✉️ anuanushkasharma3613@gmail.com</p>
+                <p>📸 @crochetiya</p>
+                <p>📍 India</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Crochetiya क्रोशिया. Made with ❤️ and Wool | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <div class="whatsapp-float">
+        <a href="https://wa.me/919013463956?text=Hi%20Crochetiya!%20I'm%20interested%20in%20your%20handmade%20wool%20products" target="_blank" title="Chat on WhatsApp">
+            💬
+        </a>
+    </div>
+
+    <div class="ai-assistant">
+        <div class="ai-button" onclick="toggleChat()">🤖</div>
+        <div class="ai-chat" id="aiChat">
+            <div class="ai-header">
+                <span>🧶 Crochetiya Assistant</span>
+                <span class="ai-close" onclick="toggleChat()">✕</span>
+            </div>
+            <div class="ai-messages" id="aiMessages">
+                <div class="ai-message bot">
+                    Namaste! 🙏 Welcome to Crochetiya! I'm your friendly wool expert. How can I help you today? Feel free to ask about our products, customization, pricing, or anything else! 🌸✨
+                </div>
+            </div>
+            <div class="quick-replies">
+                <button class="quick-reply" onclick="sendQuickReply('Tell me about wool flowers')">🌸 Wool Flowers</button>
+                <button class="quick-reply" onclick="sendQuickReply('Show me toys')">🧸 Toys</button>
+                <button class="quick-reply" onclick="sendQuickReply('Custom orders?')">🎨 Custom</button>
+                <button class="quick-reply" onclick="sendQuickReply('Prices?')">💰 Pricing</button>
+            </div>
+            <div class="ai-typing" id="aiTyping">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="ai-input-area">
+                <input type="text" class="ai-input" id="aiInput" placeholder="Ask me anything..." onkeypress="handleKeyPress(event)">
+                <button class="ai-send" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="icon">🎉</div>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out! Your message has been sent successfully. We'll get back to you soon via email or WhatsApp! 💕</p>
+            <button class="btn btn-primary" onclick="closeModal()">Awesome!</button>
+        </div>
+    </div>
+
+    <script>
+        const aiKnowledge = {
+            greetings: {
+                patterns: ['hi', 'hello', 'hey', 'namaste', 'namaskar', 'good morning', 'good evening'],
+                responses: [
+                    "Namaste! 🙏 Welcome to Crochetiya! I'm thrilled you're here. How can I help you explore our handmade wool creations today?",
+                    "Hello! 💕 So happy to see you! I'm here to help you find the perfect wool creation. What interests you?",
+                    "Hey there! 🌸 Welcome to our wool wonderland! What would you like to know about our handmade products?"
+                ]
+            },
+            thanks: {
+                patterns: ['thank', 'thanks', 'appreciate', 'धन्यवाद', 'grateful'],
+                responses: [
+                    "You're very welcome! 😊 Feel free to ask anything else about our wool creations!",
+                    "My pleasure! 💕 I'm here anytime you need help. Happy browsing!",
+                    "Anytime! 🌸 Don't hesitate to reach out if you have more questions!"
+                ]
+            },
+            flowers: {
+                patterns: ['flower', 'bloom', 'floral', 'rose', 'bouquet', 'decoration'],
+                response: "Our wool flowers are absolutely gorgeous! 🌺🌸 They're eternal blooms that never fade or wilt. Perfect for:\n\n✨ Home decoration (living room, bedroom)\n🎁 Gifts for loved ones\n💐 Wedding decorations\n🌸 Office desk charm\n\nAvailable in vibrant colors like red, pink, yellow, purple, and more! Each flower is hand-crafted with premium wool. Prices start from affordable rates. Want to see some designs? Check our Instagram @crochetiya or WhatsApp us at +91 9013463956! 📸"
+            },
+            toys: {
+                patterns: ['toy', 'teddy', 'bear', 'doll', 'kids', 'children', 'baby', 'stuffed'],
+                response: "Our handmade wool toys are super adorable! 🧸💕 Made with:\n\n✅ 100% child-safe materials\n✅ Soft premium wool\n✅ Love and care in every stitch\n\nPerfect for:\n👶 Babies (soft & safe)\n🎁 Birthday gifts\n🏠 Room decoration\n💝 Baby showers\n\nWe make teddies, rabbits, dolls, and custom characters! Each toy is unique. Prices vary by size. Message us on WhatsApp (+91 9013463956) with your requirements! 🌟"
+            },
+            keychains: {
+                patterns: ['keychain', 'key', 'accessory', 'small', 'pocket'],
+                response: "Our wool keychains are cute, colorful & practical! 🔑✨\n\nPerfect for:\n🎒 Bag accessories\n🔑 Key holders\n🎁 Party favors\n💝 Small gifts\n\nDesigns include: flowers, fruits, animals, emoji faces, and more! Super affordable and customizable. Bulk orders welcome for events! Want to order? WhatsApp us: +91 9013463956 📱"
+            },
+            bags: {
+                patterns: ['bag', 'purse', 'tote', 'handbag', 'pouch', 'shopping'],
+                response: "Our crochet bags are stylish, sturdy & eco-friendly! 👜💚\n\nFeatures:\n✨ Handmade with durable wool\n🌿 Sustainable & eco-conscious\n🎨 Available in many colors\n💪 Strong & long-lasting\n\nPerfect for:\n🛍️ Shopping trips\n🏖️ Beach outings\n👜 Daily use\n🎁 Thoughtful gifts\n\nSizes: Small, Medium, Large. Custom colors available! Contact us on WhatsApp: +91 9013463956 for designs and pricing! 📸"
+            },
+            custom: {
+                patterns: ['custom', 'personalize', 'specific', 'design', 'own', 'special', 'make', 'create'],
+                response: "YES! We LOVE creating custom pieces! 🎨✨\n\nYou can customize:\n🎨 Colors (your choice!)\n📏 Size (small to large)\n🌟 Design (your idea!)\n💝 Special messages/names\n\nCustom options for:\n🌸 Flowers (specific types)\n🧸 Toys (custom characters)\n👜 Bags (your style)\n🔑 Keychains (unique designs)\n\nJust share your idea, and we'll make it real! Takes 3-7 days depending on complexity. WhatsApp us: +91 9013463956 with your vision! 💕"
+            },
+            price: {
+                patterns: ['price', 'cost', 'how much', 'expensive', 'cheap', 'affordable', 'rate'],
+                response: "Great question! 💰 Our prices are very reasonable for handmade quality:\n\n🌸 Flowers: Starting from ₹50-200\n🧸 Toys: ₹200-800 (depends on size)\n🔑 Keychains: ₹30-100\n👜 Bags: ₹300-1000 (depends on size)\n🎨 Custom: Varies by complexity\n\nBulk orders get discounts! 🎉 Remember, these are handmade with love, not mass-produced. Each piece is unique! For exact pricing and to see designs, WhatsApp us: +91 9013463956 📱"
+            },
+            delivery: {
+                patterns: ['deliver', 'shipping', 'ship', 'send', 'courier', 'india post'],
+                response: "We ship all over India! 📦✈️\n\n🚚 Delivery Options:\n✅ India Post (affordable)\n✅ Professional courier services\n✅ Local delivery (if nearby)\n\n⏱️ Timeline:\n• Within city: 2-4 days\n• Within state: 3-5 days\n• Other states: 5-10 days\n\nShipping charges depend on location and order size. We pack everything securely with love! 💝 Contact us on WhatsApp (+91 9013463956) for exact shipping details!"
+            },
+            order: {
+                patterns: ['order', 'buy', 'purchase', 'how to order', 'want to order'],
+                response: "Ordering is super easy! 🛍️✨\n\n📱 3 Simple Steps:\n1️⃣ Message us on WhatsApp: +91 9013463956\n2️⃣ Tell us what you want (color, size, design)\n3️⃣ We'll share price, photos & confirm!\n\n💳 Payment:\n• UPI / GPay / PhonePe\n• Bank Transfer\n• Cash (for local delivery)\n\nWe'll start crafting after payment confirmation. Ready to order? Click the WhatsApp button! 💬"
+            },
+            quality: {
+                patterns: ['quality', 'material', 'wool', 'durable', 'last', 'safe'],
+                response: "Quality is our priority! ✨🧶\n\n💯 What makes us special:\n✅ Premium quality wool\n✅ Child-safe materials (for toys)\n✅ Strong, durable construction\n✅ Colorfast & long-lasting\n✅ Handmade with precision\n✅ Each piece checked carefully\n\n🌿 Eco-friendly & sustainable! Our products are made to last years, not months. We take pride in every creation! Questions? WhatsApp: +91 9013463956 💕"
+            },
+            care: {
+                patterns: ['care', 'wash', 'clean', 'maintain', 'maintenance'],
+                response: "Taking care of wool products is easy! 🧼✨\n\n🌸 For Flowers & Decorative Items:\n• Dust gently with soft cloth\n• Keep away from moisture\n• No washing needed!\n\n🧸 For Toys:\n• Spot clean with damp cloth\n• Mild soap if needed\n• Air dry completely\n• No machine wash\n\n👜 For Bags:\n• Wipe with damp cloth\n• Air dry if wet\n• Store in cool, dry place\n\nProper care = lasts forever! 💝"
+            },
+            instagram: {
+                patterns: ['instagram', 'insta', 'photos', 'pictures', 'gallery', 'images'],
+                response: "Yes! Check out our Instagram for beautiful photos! 📸✨\n\n👉 Follow us: @crochetiya\nhttps://www.instagram.com/crochetiya/\n\nYou'll see:\n🌸 Latest designs\n🎨 Custom creations\n💝 Customer reviews\n🎬 Making process videos\n🌟 Daily inspiration\n\nFollow us for updates and giveaways! Don't forget to DM us there too! 💕"
+            },
+            contact: {
+                patterns: ['contact', 'reach', 'get in touch', 'phone', 'email', 'whatsapp'],
+                response: "We'd love to hear from you! 💕\n\n📞 Contact Us:\n💬 WhatsApp: +91 9013463956 (Best & Fastest!)\n📧 Email: anuanushkasharma3613@gmail.com\n📸 Instagram: @crochetiya\n\nWhatsApp is quickest for orders and queries! We usually respond within hours. Looking forward to creating something special for you! 🌸✨"
+            },
+            location: {
+                patterns: ['where', 'location', 'based', 'city', 'from'],
+                response: "We're based in India! 🇮🇳💕\n\nWe ship all across India to your doorstep! Whether you're in Mumbai, Delhi, Bangalore, Chennai, or a small town - we deliver everywhere! 📦\n\nLocal pickup available if you're nearby. Contact us on WhatsApp (+91 9013463956) to know more! 🌟"
+            },
+            time: {
+                patterns: ['how long', 'time', 'days', 'when', 'ready', 'wait'],
+                response: "Great question! ⏰✨\n\n🎨 Making Time:\n• Simple items: 1-3 days\n• Medium complexity: 3-5 days\n• Complex/Custom: 5-10 days\n\n📦 Delivery: Add 3-10 days (depends on location)\n\n🚀 Rush orders? Let us know! We'll try our best to accommodate. Remember, good things take time, but we work fast! 💕\n\nWhatsApp us for specific timeline: +91 9013463956"
+            },
+            gift: {
+                patterns: ['gift', 'present', 'surprise', 'birthday', 'anniversary', 'wedding'],
+                response: "Perfect gift idea! 🎁💕\n\n🌟 Why our products make great gifts:\n✨ Unique & handmade\n💝 Personal & thoughtful\n🎀 Beautiful packaging\n💌 Custom messages possible\n🌸 Suitable for all ages\n\n🎉 Occasions:\n• Birthdays\n• Anniversaries\n• Weddings\n• Baby showers\n• Housewarming\n• Just because! 💕\n\nWe can create gift sets too! WhatsApp: +91 9013463956 🌸"
+            },
+            colors: {
+                patterns: ['color', 'colour', 'shade', 'available colors'],
+                response: "We have a rainbow of colors! 🌈✨\n\n🎨 Popular Colors:\n❤️ Red, Pink, Hot Pink\n💙 Blue, Sky Blue, Navy\n💚 Green, Mint, Olive\n💛 Yellow, Golden, Cream\n🧡 Orange, Peach, Coral\n💜 Purple, Lavender, Violet\n🤍 White, Beige, Brown\n🖤 Black, Grey\n\nAnd many more shades! Custom color matching available. Just send us a photo of the color you want! WhatsApp: +91 9013463956 🎨"
+            },
+            default: {
+                response: "That's a great question! 😊 I want to give you the best answer. Could you please be more specific? Or you can:\n\n💬 WhatsApp us: +91 9013463956\n📧 Email: anuanushkasharma3613@gmail.com\n📸 DM on Instagram: @crochetiya\n\nWe're here to help! 💕✨"
+            }
+        };
+
+        function getAIResponse(message) {
+            const msg = message.toLowerCase();
+            
+            for (const category in aiKnowledge) {
+                const data = aiKnowledge[category];
+                if (data.patterns) {
+                    for (const pattern of data.patterns) {
+                        if (msg.includes(pattern)) {
+                            if (data.responses) {
+                                return data.responses[Math.floor(Math.random() * data.responses.length)];
+                            }
+                            return data.response;
+                        }
+                    }
+                }
+            }
+            
+            return aiKnowledge.default.response;
+        }
+
+        function toggleChat() {
+            const chat = document.getElementById('aiChat');
+            chat.classList.toggle('active');
+        }
+
+        function addMessage(message, isBot) {
+            const messagesDiv = document.getElementById('aiMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `ai-message ${isBot ? 'bot' : 'user'}`;
+            messageDiv.textContent = message;
+            messagesDiv.appendChild(messageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        function showTyping() {
+            document.getElementById('aiTyping').classList.add('active');
+            document.getElementById('aiMessages').scrollTop = document.getElementById('aiMessages').scrollHeight;
+        }
+
+        function hideTyping() {
+            document.getElementById('aiTyping').classList.remove('active');
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('aiInput');
+            const message = input.value.trim();
+            
+            if (message === '') return;
+            
+            addMessage(message, false);
+            input.value = '';
+            
+            showTyping();
+            
+            setTimeout(() => {
+                hideTyping();
+                const response = getAIResponse(message);
+                addMessage(response, true);
+            }, 1500);
+        }
+
+        function sendQuickReply(message) {
+            addMessage(message, false);
+            showTyping();
+            
+            setTimeout(() => {
+                hideTyping();
+                const response = getAIResponse(message);
+                addMessage(response, true);
+            }, 1500);
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        function closeModal() {
+            document.getElementById('successModal').classList.remove('active');
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            const whatsappMessage = `Hi Crochetiya! 🌸\n\nName: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone || 'Not provided'}\nInterested in: ${data.product}\n\nMessage: ${data.message}`;
+            
+            const whatsappURL = `https://wa.me/919013463956?text=${encodeURIComponent(whatsappMessage)}`;
+            
+            window.open(whatsappURL, '_blank');
+            
+            document.getElementById('successModal').classList.add('active');
+            e.target.reset();
+        });
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    const navMenu = document.getElementById('navMenu');
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                    }
+                }
+            });
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.product-card, .why-card, .instagram-post').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+
+        console.log('🧶 Welcome to Crochetiya! Made with ❤️ and Wool ✨');
+    </script>
+</body>
+</html>
